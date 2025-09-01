@@ -25,16 +25,25 @@
 		  font-size: 24px;
 		  color: black;
 	  }
-	  details:first-of-type summary::marker,
-	  :is(::-webkit-details-marker) {
-	    content: "<more> ";
-	    font-family: verdana;
-	    color: grey;
-		font-size: 24px;
+	  
+	  .styled summary::-webkit-details-marker {
+	    display: none;
 	  }
 
-	  details[open]:first-of-type summary::marker {
-	    content: "<less> ";
+	  .styled summary {
+	    list-style: none;
+	    cursor: default;
+	    position: relative;
+	  }
+	  .styled summary::after {
+	    content: "<more>";
+		color: grey;
+		font-size: 32px;
+		padding-left:45%;
+	  }
+
+	  details[open].styled > summary::after {
+		content: "<less>";
 	  }
 	  
 	  table.fixed {table-layout:fixed; width:100%;}/*Setting the table width is important!*/
@@ -81,7 +90,7 @@
                   <p>I am especially interested in forms of thought and
                     talk that don't fit the standard philosophical model
                     of mind and language. </p>
-				<details>
+				<details class="styled">
 				<summary>
 				</summary>
 				<p>Much of my work can be divided into three increasingly overlapping strands.</p>
