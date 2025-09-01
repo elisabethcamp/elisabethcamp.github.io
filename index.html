@@ -41,13 +41,22 @@
 	  table.fixed td {overflow:hidden;}/*Hide text outside the cell.*/
 	  table.fixed td:nth-of-type(1) {width:30%;}/*Setting the width of column 1.*/
 	  table.fixed td:nth-of-type(2) {width:80%;}/*Setting the width of column 2.*/
+	  img.tower {
+		max-width: 64%;
+		height: auto;
+		padding-left:100px;
+		margin-top:30px;
+		margin-right:0px
+		}
+	  	
+	  }
 	  </style>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Elisabeth Camp, Philosopher</title>
   </head>
   <body>
     <img src="Assets/lake_scene.jpg" alt="Lake scene" body=""
-      style="max-width: 100%; max-height: 100%">
+      style="width: 100%">
 	<div style="position:absolute; top: 10px; right:10%; font-size: 64px; color: white; font-family: verdana">
 	<button type="button1" style="background-color: rgb(170,170,170); color: black">Home</button> 
 	<button type="button" onclick="location.href='AboutMe.html';">About Me</button> 
@@ -62,8 +71,8 @@
         <table class = "fixed">
           <tbody>
             <tr>
-              <td valign="top" halign="right"><img style="padding-left:100px;margin-top:30px;margin-right:0px" src="Assets/eiffel_tower.jpg"
-                  alt="Eiffel Tower" width="325px"><br>
+              <td valign="top" halign="right"><img class="tower" src="Assets/eiffel_tower.jpg"
+                  alt="Eiffel Tower"><br>
               </td>
               <td valign="top" halign ="left" style="margin-right: 10px; margin-left: 10px; float:left; font-family:verdana;"><br>
                   <p>I'm a philosopher of language, mind, and aesthetics
